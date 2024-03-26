@@ -9,13 +9,10 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { AiTwotoneThunderbolt } from "react-icons/ai";
 import PopUp from "@/app/components/PopUp";
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import CheckOut from "./CheckOut";
 
 const Coursera = () => {
-  
-
   return (
     <div>
       <div className="w-10/12 lg:py-20 2xl:px-20 xs:w-full  m-auto">
