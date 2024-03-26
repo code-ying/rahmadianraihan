@@ -2,27 +2,11 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import emailjs from "@emailjs/browser";
-import { product } from "@/app/libs/product";
+
 
 const PopUp = ({ openPopUp, closePopUp }) => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-
-
-  const checkout = async () => {
-    const data = {
-      id: product.id,
-      productName: product.name,
-      price: product.price,
-      quantity: product.quantity
-    };
-    const response = await fetch("/api/tokenizer", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-    const requestData = await response.json();
-    window.snap.pay(requestData.token);
-  };
 
 
   if (openPopUp !== true) return null;
@@ -109,8 +93,6 @@ const PopUp = ({ openPopUp, closePopUp }) => {
               <p className="text-xs text-start">*email untuk daftar coursera</p>
             </div>
             <button
-              onClick={checkout}
-              disabled={!name || !email}
               id="pay-button"
               href="#_"
               className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group"
