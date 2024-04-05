@@ -10,8 +10,8 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="fixed w-full z-50 flex">
-      <div className="flex justify-between m-auto py-5 md:w-3/6">
+    <nav className="fixed w-10/12 m-auto z-50 flex">
+      <div className="flex m-auto py-5 ">
         <div className="gap-3 bg-[#2E2E2E] text-white font-plusjakarta py-2 px-4 rounded-full xxs:hidden md:flex border-zinc-400">
           {navbar.map((data) => {
             return (
